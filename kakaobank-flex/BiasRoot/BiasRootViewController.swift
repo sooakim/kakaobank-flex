@@ -259,6 +259,7 @@ final class BiasRootView: UIView{
     
     @objc private func panGesture(_ recognizer: UIPanGestureRecognizer){
         if isScrolling{
+            makeStickyHeightInRange()
             recognizer.setTranslation(.zero, in: self)
             return
         }
@@ -312,9 +313,13 @@ final class BiasRootView: UIView{
         notifyPanProgress()
     }
     
+    private func makeStickyHeightInRange(){
+        stickyHeight = max(minStickyHeight, min(maxStickyHeight, stickyHeight))
+    }
+    
     private func snapPanContainer(animated: Bool){
         let snap = {
-            self.stickyHeight = max(self.minStickyHeight, min(self.maxStickyHeight, self.stickyHeight))
+            self.makeStickyHeightInRange()
             
             if self.panProgress > 0.4{
                 self.stickyHeight = self.maxStickyHeight
