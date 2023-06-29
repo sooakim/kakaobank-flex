@@ -207,7 +207,6 @@ final class BiasRootView: UIView{
             updateStickyHeight()
         }
     }
-    private var startHeight: CGFloat = 0
     private var panProgress: CGFloat = 0{
         didSet{
             updatePanProgress()
@@ -260,16 +259,16 @@ final class BiasRootView: UIView{
     
     @objc private func panGesture(_ recognizer: UIPanGestureRecognizer){
         if isScrolling{
+            recognizer.setTranslation(.zero, in: self)
             return
         }
         
         let translation = recognizer.translation(in: self)
+        defer{ recognizer.setTranslation(.zero, in: self) }
         
         switch recognizer.state{
-        case .began:
-            startHeight = stickyHeight
-        case .changed:
-            stickyHeight = startHeight - translation.y
+        case .began, .changed:
+            stickyHeight -= translation.y
         case .cancelled, .ended:
             snapPanContainer(animated: true)
         default:
@@ -279,7 +278,6 @@ final class BiasRootView: UIView{
     
     private func updateMinStickyHeight(){
         stickyHeight = minStickyHeight
-        startHeight = minStickyHeight
         setNeedsLayout()
     }
     
