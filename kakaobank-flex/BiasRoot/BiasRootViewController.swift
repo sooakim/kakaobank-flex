@@ -34,7 +34,7 @@ final class BiasRootViewController: UIViewController, BiasRootPresentable, BiasR
         ]
         
         view.backgroundColor = .white
-    
+        
         biasRootView.panProgressDidChange = { [weak self] progress in
             self?.updateTitleColor(progress: progress)
         }
@@ -66,6 +66,16 @@ final class BiasRootView: UIView{
             updateMinStickyHeight()
         }
     }
+    var accountAliasName: String = "마카오적금"{
+        didSet{
+            updateAccountAliasName()
+        }
+    }
+    var balance: String = "99999원"{
+        didSet{
+            updateBalance()
+        }
+    }
     var panProgressDidChange: ((CGFloat) -> Void)? = nil
     
     private let topView = {
@@ -74,6 +84,22 @@ final class BiasRootView: UIView{
     }()
     private let imageContainer = {
         let view = UIView()
+        return view
+    }()
+    private let textContainer = {
+        let view = UIView()
+        return view
+    }()
+    private let titleLabel = {
+        let view = UILabel()
+        view.font = .systemFont(ofSize: 16, weight: .regular)
+        view.textColor = .white
+        return view
+    }()
+    private let balanceLabel = {
+        let view = UILabel()
+        view.font = .systemFont(ofSize: 32, weight: .medium)
+        view.textColor = .white
         return view
     }()
     private let dimmedView = {
@@ -100,7 +126,7 @@ final class BiasRootView: UIView{
     }
     private var stickyHeight: CGFloat = 0{
         didSet{
-            setNeedsLayout()
+            updateStickyHeight()
         }
     }
     private var startHeight: CGFloat = 0
@@ -115,12 +141,19 @@ final class BiasRootView: UIView{
         addSubview(imageContainer)
         imageContainer.addSubview(imageView)
         imageContainer.addSubview(dimmedView)
+        
+        imageContainer.addSubview(textContainer)
+        textContainer.addSubview(titleLabel)
+        textContainer.addSubview(balanceLabel)
+        
         addSubview(panContainer)
         addSubview(topView)
         
         updateMinStickyHeight()
         updateCornerRadius()
         updatePanProgress()
+        updateAccountAliasName()
+        updateBalance()
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
         panContainer.addGestureRecognizer(panGestureRecognizer)
@@ -141,6 +174,26 @@ final class BiasRootView: UIView{
             .horizontally()
             .bottom(stickyHeight)
         
+        textContainer.pin
+            .horizontally(safeAreaInsets)
+        
+        balanceLabel.pin.bottom()
+            .horizontally()
+            .sizeToFit(.widthFlexible)
+            .justify(.center)
+        
+        titleLabel.pin.above(of: balanceLabel)
+            .sizeToFit(.widthFlexible)
+            .horizontally()
+            .marginBottom(8)
+            .justify(.center)
+        
+        textContainer.pin.bottom()
+            .horizontally(safeAreaInsets)
+            .wrapContent()
+            .marginBottom(cornerRadius + 16)
+            .justify(.center)
+        
         imageView.pin.all()
         
         dimmedView.pin.all()
@@ -159,8 +212,6 @@ final class BiasRootView: UIView{
             startHeight = stickyHeight
         case .changed:
             stickyHeight = startHeight - translation.y
-            
-            notifyPanProgress()
         case .cancelled, .ended:
             snapPanContainer(animated: true)
         default:
@@ -179,13 +230,41 @@ final class BiasRootView: UIView{
         setNeedsLayout()
     }
     
+    private func updateAccountAliasName(){
+        titleLabel.text = accountAliasName
+        setNeedsLayout()
+    }
+    
+    private func updateBalance(){
+        balanceLabel.text = balance
+        setNeedsLayout()
+    }
+    
     private func updatePanProgress(){
         self.dimmedView.alpha = panProgress * 0.4
+    }
+    
+    private func updateStickyHeight(){
+        if stickyHeight > minStickyHeight{
+            let translationY = (stickyHeight - minStickyHeight) / 2
+            textContainer.transform = CGAffineTransform(translationX: 0, y: translationY)
+        }else{
+            textContainer.transform = CGAffineTransform(translationX: 0, y: 0)
+        }
+        
+        setNeedsLayout()
+        notifyPanProgress()
     }
     
     private func snapPanContainer(animated: Bool){
         let snap = {
             self.stickyHeight = max(self.minStickyHeight, min(self.maxStickyHeight, self.stickyHeight))
+            
+            if self.panProgress > 0.4{
+                self.stickyHeight = self.maxStickyHeight
+            }else{
+                self.stickyHeight = self.minStickyHeight
+            }
         }
         
         if animated{
@@ -207,7 +286,7 @@ final class BiasRootView: UIView{
         var panProgress = (stickyHeight - minStickyHeight) / abs(maxStickyHeight - minStickyHeight)
         panProgress = max(0, min(1, panProgress))
         self.panProgress = panProgress
-
+        
         panProgressDidChange?(panProgress)
     }
 }
