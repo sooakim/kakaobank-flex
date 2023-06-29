@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		581A0FD12A4DCBD500E5D867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A0FD02A4DCBD500E5D867 /* AppDelegate.swift */; };
+		581A0FD32A4DCBD500E5D867 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A0FD22A4DCBD500E5D867 /* SceneDelegate.swift */; };
+		581A0FD52A4DCBD500E5D867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A0FD42A4DCBD500E5D867 /* ViewController.swift */; };
+		581A0FD82A4DCBD500E5D867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581A0FD62A4DCBD500E5D867 /* Main.storyboard */; };
+		581A0FDA2A4DCBDA00E5D867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581A0FD92A4DCBDA00E5D867 /* Assets.xcassets */; };
+		581A0FDD2A4DCBDA00E5D867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581A0FDB2A4DCBDA00E5D867 /* LaunchScreen.storyboard */; };
+		581A0FE82A4DCBDA00E5D867 /* kakaobank_flexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A0FE72A4DCBDA00E5D867 /* kakaobank_flexTests.swift */; };
+		581A0FF22A4DCBDB00E5D867 /* kakaobank_flexUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A0FF12A4DCBDB00E5D867 /* kakaobank_flexUITests.swift */; };
+		581A0FF42A4DCBDB00E5D867 /* kakaobank_flexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A0FF32A4DCBDB00E5D867 /* kakaobank_flexUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		581A0FE42A4DCBDA00E5D867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 581A0FC52A4DCBD500E5D867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 581A0FCC2A4DCBD500E5D867;
+			remoteInfo = "kakaobank-flex";
+		};
+		581A0FEE2A4DCBDB00E5D867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 581A0FC52A4DCBD500E5D867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 581A0FCC2A4DCBD500E5D867;
+			remoteInfo = "kakaobank-flex";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		581A0FCD2A4DCBD500E5D867 /* kakaobank-flex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kakaobank-flex.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		581A0FD02A4DCBD500E5D867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		581A0FD22A4DCBD500E5D867 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		581A0FD42A4DCBD500E5D867 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		581A0FD72A4DCBD500E5D867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		581A0FD92A4DCBDA00E5D867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		581A0FDC2A4DCBDA00E5D867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		581A0FDE2A4DCBDA00E5D867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		581A0FE32A4DCBDA00E5D867 /* kakaobank-flexTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kakaobank-flexTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		581A0FE72A4DCBDA00E5D867 /* kakaobank_flexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaobank_flexTests.swift; sourceTree = "<group>"; };
+		581A0FED2A4DCBDB00E5D867 /* kakaobank-flexUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "kakaobank-flexUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		581A0FF12A4DCBDB00E5D867 /* kakaobank_flexUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaobank_flexUITests.swift; sourceTree = "<group>"; };
+		581A0FF32A4DCBDB00E5D867 /* kakaobank_flexUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaobank_flexUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		581A0FCA2A4DCBD500E5D867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		581A0FE02A4DCBDA00E5D867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		581A0FEA2A4DCBDB00E5D867 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		581A0FC42A4DCBD500E5D867 = {
+			isa = PBXGroup;
+			children = (
+				581A0FCF2A4DCBD500E5D867 /* kakaobank-flex */,
+				581A0FE62A4DCBDA00E5D867 /* kakaobank-flexTests */,
+				581A0FF02A4DCBDB00E5D867 /* kakaobank-flexUITests */,
+				581A0FCE2A4DCBD500E5D867 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		581A0FCE2A4DCBD500E5D867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				581A0FCD2A4DCBD500E5D867 /* kakaobank-flex.app */,
+				581A0FE32A4DCBDA00E5D867 /* kakaobank-flexTests.xctest */,
+				581A0FED2A4DCBDB00E5D867 /* kakaobank-flexUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		581A0FCF2A4DCBD500E5D867 /* kakaobank-flex */ = {
+			isa = PBXGroup;
+			children = (
+				581A0FD02A4DCBD500E5D867 /* AppDelegate.swift */,
+				581A0FD22A4DCBD500E5D867 /* SceneDelegate.swift */,
+				581A0FD42A4DCBD500E5D867 /* ViewController.swift */,
+				581A0FD62A4DCBD500E5D867 /* Main.storyboard */,
+				581A0FD92A4DCBDA00E5D867 /* Assets.xcassets */,
+				581A0FDB2A4DCBDA00E5D867 /* LaunchScreen.storyboard */,
+				581A0FDE2A4DCBDA00E5D867 /* Info.plist */,
+			);
+			path = "kakaobank-flex";
+			sourceTree = "<group>";
+		};
+		581A0FE62A4DCBDA00E5D867 /* kakaobank-flexTests */ = {
+			isa = PBXGroup;
+			children = (
+				581A0FE72A4DCBDA00E5D867 /* kakaobank_flexTests.swift */,
+			);
+			path = "kakaobank-flexTests";
+			sourceTree = "<group>";
+		};
+		581A0FF02A4DCBDB00E5D867 /* kakaobank-flexUITests */ = {
+			isa = PBXGroup;
+			children = (
+				581A0FF12A4DCBDB00E5D867 /* kakaobank_flexUITests.swift */,
+				581A0FF32A4DCBDB00E5D867 /* kakaobank_flexUITestsLaunchTests.swift */,
+			);
+			path = "kakaobank-flexUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		581A0FCC2A4DCBD500E5D867 /* kakaobank-flex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 581A0FF72A4DCBDB00E5D867 /* Build configuration list for PBXNativeTarget "kakaobank-flex" */;
+			buildPhases = (
+				581A0FC92A4DCBD500E5D867 /* Sources */,
+				581A0FCA2A4DCBD500E5D867 /* Frameworks */,
+				581A0FCB2A4DCBD500E5D867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "kakaobank-flex";
+			productName = "kakaobank-flex";
+			productReference = 581A0FCD2A4DCBD500E5D867 /* kakaobank-flex.app */;
+			productType = "com.apple.product-type.application";
+		};
+		581A0FE22A4DCBDA00E5D867 /* kakaobank-flexTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 581A0FFA2A4DCBDB00E5D867 /* Build configuration list for PBXNativeTarget "kakaobank-flexTests" */;
+			buildPhases = (
+				581A0FDF2A4DCBDA00E5D867 /* Sources */,
+				581A0FE02A4DCBDA00E5D867 /* Frameworks */,
+				581A0FE12A4DCBDA00E5D867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				581A0FE52A4DCBDA00E5D867 /* PBXTargetDependency */,
+			);
+			name = "kakaobank-flexTests";
+			productName = "kakaobank-flexTests";
+			productReference = 581A0FE32A4DCBDA00E5D867 /* kakaobank-flexTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		581A0FEC2A4DCBDB00E5D867 /* kakaobank-flexUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 581A0FFD2A4DCBDB00E5D867 /* Build configuration list for PBXNativeTarget "kakaobank-flexUITests" */;
+			buildPhases = (
+				581A0FE92A4DCBDB00E5D867 /* Sources */,
+				581A0FEA2A4DCBDB00E5D867 /* Frameworks */,
+				581A0FEB2A4DCBDB00E5D867 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				581A0FEF2A4DCBDB00E5D867 /* PBXTargetDependency */,
+			);
+			name = "kakaobank-flexUITests";
+			productName = "kakaobank-flexUITests";
+			productReference = 581A0FED2A4DCBDB00E5D867 /* kakaobank-flexUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		581A0FC52A4DCBD500E5D867 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					581A0FCC2A4DCBD500E5D867 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					581A0FE22A4DCBDA00E5D867 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 581A0FCC2A4DCBD500E5D867;
+					};
+					581A0FEC2A4DCBDB00E5D867 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 581A0FCC2A4DCBD500E5D867;
+					};
+				};
+			};
+			buildConfigurationList = 581A0FC82A4DCBD500E5D867 /* Build configuration list for PBXProject "kakaobank-flex" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 581A0FC42A4DCBD500E5D867;
+			productRefGroup = 581A0FCE2A4DCBD500E5D867 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				581A0FCC2A4DCBD500E5D867 /* kakaobank-flex */,
+				581A0FE22A4DCBDA00E5D867 /* kakaobank-flexTests */,
+				581A0FEC2A4DCBDB00E5D867 /* kakaobank-flexUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		581A0FCB2A4DCBD500E5D867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				581A0FDD2A4DCBDA00E5D867 /* LaunchScreen.storyboard in Resources */,
+				581A0FDA2A4DCBDA00E5D867 /* Assets.xcassets in Resources */,
+				581A0FD82A4DCBD500E5D867 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		581A0FE12A4DCBDA00E5D867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		581A0FEB2A4DCBDB00E5D867 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		581A0FC92A4DCBD500E5D867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				581A0FD52A4DCBD500E5D867 /* ViewController.swift in Sources */,
+				581A0FD12A4DCBD500E5D867 /* AppDelegate.swift in Sources */,
+				581A0FD32A4DCBD500E5D867 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		581A0FDF2A4DCBDA00E5D867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				581A0FE82A4DCBDA00E5D867 /* kakaobank_flexTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		581A0FE92A4DCBDB00E5D867 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				581A0FF22A4DCBDB00E5D867 /* kakaobank_flexUITests.swift in Sources */,
+				581A0FF42A4DCBDB00E5D867 /* kakaobank_flexUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		581A0FE52A4DCBDA00E5D867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 581A0FCC2A4DCBD500E5D867 /* kakaobank-flex */;
+			targetProxy = 581A0FE42A4DCBDA00E5D867 /* PBXContainerItemProxy */;
+		};
+		581A0FEF2A4DCBDB00E5D867 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 581A0FCC2A4DCBD500E5D867 /* kakaobank-flex */;
+			targetProxy = 581A0FEE2A4DCBDB00E5D867 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		581A0FD62A4DCBD500E5D867 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				581A0FD72A4DCBD500E5D867 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		581A0FDB2A4DCBDA00E5D867 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				581A0FDC2A4DCBDA00E5D867 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		581A0FF52A4DCBDB00E5D867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		581A0FF62A4DCBDB00E5D867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		581A0FF82A4DCBDB00E5D867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SM396Z3QTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "kakaobank-flex/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.sooakim.kakaobank-flex";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		581A0FF92A4DCBDB00E5D867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SM396Z3QTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "kakaobank-flex/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.sooakim.kakaobank-flex";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		581A0FFB2A4DCBDB00E5D867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SM396Z3QTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.sooakim.kakaobank-flexTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kakaobank-flex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kakaobank-flex";
+			};
+			name = Debug;
+		};
+		581A0FFC2A4DCBDB00E5D867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SM396Z3QTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.sooakim.kakaobank-flexTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kakaobank-flex.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/kakaobank-flex";
+			};
+			name = Release;
+		};
+		581A0FFE2A4DCBDB00E5D867 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SM396Z3QTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.sooakim.kakaobank-flexUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kakaobank-flex";
+			};
+			name = Debug;
+		};
+		581A0FFF2A4DCBDB00E5D867 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SM396Z3QTU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.sooakim.kakaobank-flexUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "kakaobank-flex";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		581A0FC82A4DCBD500E5D867 /* Build configuration list for PBXProject "kakaobank-flex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				581A0FF52A4DCBDB00E5D867 /* Debug */,
+				581A0FF62A4DCBDB00E5D867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		581A0FF72A4DCBDB00E5D867 /* Build configuration list for PBXNativeTarget "kakaobank-flex" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				581A0FF82A4DCBDB00E5D867 /* Debug */,
+				581A0FF92A4DCBDB00E5D867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		581A0FFA2A4DCBDB00E5D867 /* Build configuration list for PBXNativeTarget "kakaobank-flexTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				581A0FFB2A4DCBDB00E5D867 /* Debug */,
+				581A0FFC2A4DCBDB00E5D867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		581A0FFD2A4DCBDB00E5D867 /* Build configuration list for PBXNativeTarget "kakaobank-flexUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				581A0FFE2A4DCBDB00E5D867 /* Debug */,
+				581A0FFF2A4DCBDB00E5D867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 581A0FC52A4DCBD500E5D867 /* Project object */;
+}
