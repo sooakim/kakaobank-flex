@@ -16,7 +16,7 @@ protocol BiasRootPresentableListener: AnyObject {
     // interactor class.
 }
 
-final class BiasRootViewController: UIViewController, BiasRootPresentable, BiasRootViewControllable {
+final class BiasRootViewController: UIViewController, BiasRootPresentable {
     
     weak var listener: BiasRootPresentableListener?
     
@@ -52,6 +52,13 @@ final class BiasRootViewController: UIViewController, BiasRootPresentable, BiasR
     }
 }
 
+extension BiasRootViewController: BiasRootViewControllable{
+    func attachChild(viewController: ViewControllable) {
+        addChild(viewController.uiviewController)
+        biasRootView.childView = viewController.uiviewController.view
+    }
+}
+
 import FlexLayout
 import PinLayout
 
@@ -77,62 +84,17 @@ final class BiasRootView: UIView{
         }
     }
     var panProgressDidChange: ((CGFloat) -> Void)? = nil
-    
-    private let topView = {
-        let view = UIView()
-        return view
-    }()
-    private let imageContainer = {
-        let view = UIView()
-        return view
-    }()
-    private let textContainer = {
-        let view = UIView()
-        return view
-    }()
-    private let titleLabel = {
-        let view = UILabel()
-        view.font = .systemFont(ofSize: 16, weight: .regular)
-        view.textColor = .white
-        return view
-    }()
-    private let balanceLabel = {
-        let view = UILabel()
-        view.font = .systemFont(ofSize: 32, weight: .medium)
-        view.textColor = .white
-        return view
-    }()
-    private let dimmedView = {
-        let view = UIImageView()
-        view.backgroundColor = .gray
-        return view
-    }()
-    private let imageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.sd_setImage(with: URL(string: "https://picsum.photos/1440"))
-        return view
-    }()
-    private let panContainer = {
-        let view = UIView()
-        view.backgroundColor = .white
-        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        view.layer.masksToBounds = true
-        return view
-    }()
-    
-    private var maxStickyHeight: CGFloat{
-        frame.height - safeAreaInsets.top - cornerRadius
-    }
-    private var stickyHeight: CGFloat = 0{
+    var childView: View? = nil{
         didSet{
-            updateStickyHeight()
-        }
-    }
-    private var startHeight: CGFloat = 0
-    private var panProgress: CGFloat = 0{
-        didSet{
-            updatePanProgress()
+            otherGestureRecognizer = nil
+            
+            if let oldValue{
+                oldValue.removeFromSuperview()
+            }
+            if let childView{
+                self.panContainer.addSubview(childView)
+            }
+            setNeedsLayout()
         }
     }
     
@@ -156,6 +118,7 @@ final class BiasRootView: UIView{
         updateBalance()
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGesture))
+        panGestureRecognizer.delegate = self
         panContainer.addGestureRecognizer(panGestureRecognizer)
     }
     
@@ -202,9 +165,104 @@ final class BiasRootView: UIView{
             .marginTop(-cornerRadius)
             .horizontally()
             .bottom()
+        
+        childView?.pin
+            .all()
     }
     
+    // MARK: Private
+    
+    fileprivate var otherGestureRecognizer: UIGestureRecognizer? = nil{
+        didSet{
+            guard otherGestureRecognizer !== oldValue else{ return }
+            
+            if let otherGestureRecognizer, let scrollView = otherGestureRecognizer.view as? UIScrollView{
+                contentOffsetObservation = scrollView.observe(\.contentOffset, options: [.new, .old]) { [weak self] view, changed in
+                    guard let self = self else{ return }
+                    guard let oldValue = changed.oldValue, let newValue = changed.newValue else{ return }
+                    guard oldValue.y != newValue.y else{ return }
+                    if newValue.y < .zero {
+                        self.isScrolling = false
+                        return
+                    }
+                    
+                    var isScrolling = self.panProgress == 1
+                    if !isScrolling{
+                        view.contentOffset = .zero
+                    }
+                    self.isScrolling = isScrolling
+                }
+            }else{
+                contentOffsetObservation = nil
+            }
+        }
+    }
+    private var contentOffsetObservation: NSKeyValueObservation? = nil
+    
+    fileprivate var maxStickyHeight: CGFloat{
+        frame.height - safeAreaInsets.top - cornerRadius
+    }
+    fileprivate var stickyHeight: CGFloat = 0{
+        didSet{
+            updateStickyHeight()
+        }
+    }
+    private var startHeight: CGFloat = 0
+    private var panProgress: CGFloat = 0{
+        didSet{
+            updatePanProgress()
+        }
+    }
+    private var isScrolling: Bool = false
+    
+    private let topView = {
+        let view = UIView()
+        return view
+    }()
+    private let imageContainer = {
+        let view = UIView()
+        return view
+    }()
+    private let textContainer = {
+        let view = UIView()
+        return view
+    }()
+    private let titleLabel = {
+        let view = UILabel()
+        view.font = .systemFont(ofSize: 16, weight: .regular)
+        view.textColor = .white
+        return view
+    }()
+    private let balanceLabel = {
+        let view = UILabel()
+        view.font = .systemFont(ofSize: 32, weight: .medium)
+        view.textColor = .white
+        return view
+    }()
+    private let dimmedView = {
+        let view = UIImageView()
+        view.backgroundColor = .gray
+        return view
+    }()
+    private let imageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.sd_setImage(with: URL(string: "https://picsum.photos/1440"))
+        return view
+    }()
+    private let panContainer = {
+        let view = UIView()
+        view.backgroundColor = .white
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        view.layer.masksToBounds = true
+        return view
+    }()
+    
     @objc private func panGesture(_ recognizer: UIPanGestureRecognizer){
+        if isScrolling{
+            return
+        }
+        
         let translation = recognizer.translation(in: self)
         
         switch recognizer.state{
@@ -288,5 +346,14 @@ final class BiasRootView: UIView{
         self.panProgress = panProgress
         
         panProgressDidChange?(panProgress)
+    }
+}
+
+extension BiasRootView: UIGestureRecognizerDelegate{
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        if let scrollView = otherGestureRecognizer.view as? UIScrollView, scrollView.panGestureRecognizer === otherGestureRecognizer{
+            self.otherGestureRecognizer = otherGestureRecognizer
+        }
+        return true
     }
 }

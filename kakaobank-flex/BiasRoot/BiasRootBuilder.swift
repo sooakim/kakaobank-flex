@@ -34,6 +34,12 @@ final class BiasRootBuilder: Builder<BiasRootDependency>, BiasRootBuildable {
         let viewController = BiasRootViewController()
         let interactor = BiasRootInteractor(presenter: viewController)
         interactor.listener = listener
-        return BiasRootRouter(interactor: interactor, viewController: viewController)
+        
+        let transactionHistoryBuilder = BiasTransactionHistoryBuilder(dependency: component)
+        return BiasRootRouter(
+            interactor: interactor,
+            viewController: viewController,
+            transactionHistoryBuilder: transactionHistoryBuilder
+        )
     }
 }

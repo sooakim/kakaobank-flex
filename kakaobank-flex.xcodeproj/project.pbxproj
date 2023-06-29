@@ -22,6 +22,11 @@
 		581A100F2A4DD60B00E5D867 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 581A100E2A4DD60B00E5D867 /* FlexLayout */; };
 		581A10122A4DD62500E5D867 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 581A10112A4DD62500E5D867 /* PinLayout */; };
 		581A10162A4DD67F00E5D867 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 581A10152A4DD67F00E5D867 /* SDWebImage */; };
+		581A101C2A4DFA1100E5D867 /* BiasTransactionHistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A10182A4DFA1100E5D867 /* BiasTransactionHistoryRouter.swift */; };
+		581A101D2A4DFA1100E5D867 /* BiasTransactionHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A10192A4DFA1100E5D867 /* BiasTransactionHistoryViewController.swift */; };
+		581A101E2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A101A2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift */; };
+		581A101F2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A101B2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift */; };
+		581A10222A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A10212A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +62,11 @@
 		581A10032A4DCF0800E5D867 /* BiasRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasRootViewController.swift; sourceTree = "<group>"; };
 		581A10042A4DCF0800E5D867 /* BiasRootBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasRootBuilder.swift; sourceTree = "<group>"; };
 		581A10052A4DCF0800E5D867 /* BiasRootInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasRootInteractor.swift; sourceTree = "<group>"; };
+		581A10182A4DFA1100E5D867 /* BiasTransactionHistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasTransactionHistoryRouter.swift; sourceTree = "<group>"; };
+		581A10192A4DFA1100E5D867 /* BiasTransactionHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasTransactionHistoryViewController.swift; sourceTree = "<group>"; };
+		581A101A2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasTransactionHistoryBuilder.swift; sourceTree = "<group>"; };
+		581A101B2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasTransactionHistoryInteractor.swift; sourceTree = "<group>"; };
+		581A10212A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BiasRootComponent+BiasTransactionHistory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,7 @@
 		581A0FCF2A4DCBD500E5D867 /* kakaobank-flex */ = {
 			isa = PBXGroup;
 			children = (
+				581A10172A4DF9F800E5D867 /* BiasTransactionHistory */,
 				581A10012A4DCEF400E5D867 /* BiasRoot */,
 				581A0FD02A4DCBD500E5D867 /* AppDelegate.swift */,
 				581A0FD42A4DCBD500E5D867 /* ViewController.swift */,
@@ -142,6 +153,7 @@
 		581A10012A4DCEF400E5D867 /* BiasRoot */ = {
 			isa = PBXGroup;
 			children = (
+				581A10202A4DFBA900E5D867 /* Component */,
 				581A10022A4DCF0800E5D867 /* BiasRootRouter.swift */,
 				581A10032A4DCF0800E5D867 /* BiasRootViewController.swift */,
 				581A10042A4DCF0800E5D867 /* BiasRootBuilder.swift */,
@@ -155,6 +167,25 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		581A10172A4DF9F800E5D867 /* BiasTransactionHistory */ = {
+			isa = PBXGroup;
+			children = (
+				581A10182A4DFA1100E5D867 /* BiasTransactionHistoryRouter.swift */,
+				581A10192A4DFA1100E5D867 /* BiasTransactionHistoryViewController.swift */,
+				581A101A2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift */,
+				581A101B2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift */,
+			);
+			path = BiasTransactionHistory;
+			sourceTree = "<group>";
+		};
+		581A10202A4DFBA900E5D867 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				581A10212A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,10 +331,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				581A10062A4DCF0800E5D867 /* BiasRootRouter.swift in Sources */,
+				581A101F2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift in Sources */,
 				581A10092A4DCF0800E5D867 /* BiasRootInteractor.swift in Sources */,
 				581A10072A4DCF0800E5D867 /* BiasRootViewController.swift in Sources */,
+				581A101D2A4DFA1100E5D867 /* BiasTransactionHistoryViewController.swift in Sources */,
 				581A10082A4DCF0800E5D867 /* BiasRootBuilder.swift in Sources */,
 				581A0FD52A4DCBD500E5D867 /* ViewController.swift in Sources */,
+				581A101E2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift in Sources */,
+				581A101C2A4DFA1100E5D867 /* BiasTransactionHistoryRouter.swift in Sources */,
+				581A10222A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift in Sources */,
 				581A0FD12A4DCBD500E5D867 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
