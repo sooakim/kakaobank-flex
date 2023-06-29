@@ -27,6 +27,7 @@
 		581A101E2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A101A2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift */; };
 		581A101F2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A101B2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift */; };
 		581A10222A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A10212A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift */; };
+		581A10242A4E0A3500E5D867 /* BiasRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581A10232A4E0A3500E5D867 /* BiasRootView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		581A101A2A4DFA1100E5D867 /* BiasTransactionHistoryBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasTransactionHistoryBuilder.swift; sourceTree = "<group>"; };
 		581A101B2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasTransactionHistoryInteractor.swift; sourceTree = "<group>"; };
 		581A10212A4DFBBE00E5D867 /* BiasRootComponent+BiasTransactionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BiasRootComponent+BiasTransactionHistory.swift"; sourceTree = "<group>"; };
+		581A10232A4E0A3500E5D867 /* BiasRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiasRootView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				581A10032A4DCF0800E5D867 /* BiasRootViewController.swift */,
 				581A10042A4DCF0800E5D867 /* BiasRootBuilder.swift */,
 				581A10052A4DCF0800E5D867 /* BiasRootInteractor.swift */,
+				581A10232A4E0A3500E5D867 /* BiasRootView.swift */,
 			);
 			path = BiasRoot;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				581A10062A4DCF0800E5D867 /* BiasRootRouter.swift in Sources */,
 				581A101F2A4DFA1100E5D867 /* BiasTransactionHistoryInteractor.swift in Sources */,
 				581A10092A4DCF0800E5D867 /* BiasRootInteractor.swift in Sources */,
+				581A10242A4E0A3500E5D867 /* BiasRootView.swift in Sources */,
 				581A10072A4DCF0800E5D867 /* BiasRootViewController.swift in Sources */,
 				581A101D2A4DFA1100E5D867 /* BiasTransactionHistoryViewController.swift in Sources */,
 				581A10082A4DCF0800E5D867 /* BiasRootBuilder.swift in Sources */,

@@ -15,6 +15,8 @@ protocol BiasRootInteractable: Interactable, BiasTransactionHistoryListener{
 protocol BiasRootViewControllable: ViewControllable {
     // TODO: Declare methods the router invokes to manipulate the view hierarchy.
     func attachChild(viewController: ViewControllable)
+    
+    func detachChild(viewController: ViewControllable)
 }
 
 final class BiasRootRouter: ViewableRouter<BiasRootInteractable, BiasRootViewControllable>, BiasRootRouting {
